@@ -19,6 +19,10 @@ public class GameManager : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("showTutorial", true);
         }
+        if (nextLevel == 0)
+        {
+            Invoke("fadeInNextStage", 75);
+        }
     }
 
     // Update is called once per frame
@@ -47,7 +51,14 @@ public class GameManager : MonoBehaviour
 
     public void nextStage()
     {
-        SceneManager.LoadScene("Level" + nextLevel);
+        if (nextLevel == 0)
+        {
+            SceneManager.LoadScene("Intro");
+        }
+        else
+        {
+            SceneManager.LoadScene("Level" + nextLevel);
+        }
     }
 
     public void completeStage()

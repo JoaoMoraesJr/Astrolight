@@ -9,7 +9,8 @@ public class Interactable : MonoBehaviour
     public float sizeVelocity = 0.01f;
     public bool affectMass = false;
     public float massVelocity = 0.01f;
-    public bool onlyGrowY = false;
+    public bool onlyResizeY = false;
+    public bool canResize = true;
     // Start is called before the first frame update
 
     public float growthVelocity;
@@ -30,8 +31,8 @@ public class Interactable : MonoBehaviour
 
     public void Grow()
     {
-        if (transform.localScale.y < maxSize) {
-            if (onlyGrowY)
+        if (canResize && transform.localScale.y < maxSize) {
+            if (onlyResizeY)
             {
                 transform.localScale = transform.localScale + new Vector3(0, sizeVelocity * Time.deltaTime, 0);
             }
@@ -48,9 +49,16 @@ public class Interactable : MonoBehaviour
 
     public void Shrink()
     {
-        if (transform.localScale.y > minSize)
+        if (canResize && transform.localScale.y > minSize)
         {
+            if (onlyResizeY)
+            {
+                transform.localScale = transform.localScale - new Vector3(0, sizeVelocity * Time.deltaTime, 0);
+            }
+            else
+            {
             transform.localScale = transform.localScale - new Vector3(sizeVelocity * Time.deltaTime, sizeVelocity * Time.deltaTime, 0);
+            }
         }
         if (affectMass)
         {

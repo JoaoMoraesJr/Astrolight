@@ -53,7 +53,7 @@ public class PlayerGun : MonoBehaviour
         if (!isShooting && currentShot != null)
         {
             GetComponent<AudioSource>().Stop();
-            if (currentDistance <= 0.1f) {
+            if (currentDistance <= 0.3f) {
                 Destroy(currentShot.gameObject);
                 gunParticle.SetActive(false);
             }
@@ -133,7 +133,9 @@ public class PlayerGun : MonoBehaviour
 
     public void createTrails()
     {
+        float scaleSegment = Vector2.Distance(transform.position, currentShot.transform.position);
         int segmentsToCreate = Mathf.RoundToInt(Vector2.Distance(transform.position, currentShot.transform.position));
+        scaleSegment = (scaleSegment - segmentsToCreate)/segmentsToCreate;
         if (segmentsToCreate == 0 && trails.Count == 1)
         {
             Destroy(trails[0]);
@@ -160,6 +162,7 @@ public class PlayerGun : MonoBehaviour
                 {
                     trails[i].transform.position = positionToInstantiate;
                     trails[i].transform.rotation = transform.rotation;
+                    trails[i].transform.localScale = new Vector2(1 + scaleSegment, 1);
                 }
                 else
                 {
