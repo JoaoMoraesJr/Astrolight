@@ -40,10 +40,10 @@ public class Interactable : MonoBehaviour
             {
                 transform.localScale = transform.localScale + new Vector3(sizeVelocity * Time.deltaTime, sizeVelocity * Time.deltaTime, 0) ;
             }
-        }
-        if (affectMass)
-        {
-            this.GetComponent<Rigidbody2D>().mass = this.GetComponent<Rigidbody2D>().mass + (massGrowthVelocity * Time.deltaTime);
+            if (affectMass)
+            {
+                this.GetComponent<Rigidbody2D>().mass = this.GetComponent<Rigidbody2D>().mass + (massGrowthVelocity * Time.deltaTime);
+            }
         }
     }
 
@@ -59,10 +59,10 @@ public class Interactable : MonoBehaviour
             {
             transform.localScale = transform.localScale - new Vector3(sizeVelocity * Time.deltaTime, sizeVelocity * Time.deltaTime, 0);
             }
-        }
-        if (affectMass)
-        {
-            this.GetComponent<Rigidbody2D>().mass = this.GetComponent<Rigidbody2D>().mass + (massShrinkVelocity * Time.deltaTime);
+            if (affectMass)
+            {
+                this.GetComponent<Rigidbody2D>().mass = this.GetComponent<Rigidbody2D>().mass + (massShrinkVelocity * Time.deltaTime);
+            }
         }
     }
 }

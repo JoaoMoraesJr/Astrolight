@@ -28,8 +28,13 @@ public class GoalButton : MonoBehaviour
             }
             //activatedObject.GetComponent<GoalInteractable>().ActivateGoal();
             foreach(GameObject activated in activatedObjects){
-
-            activated.GetComponent<Animator>().SetBool("Activated", true);
+                if (activated.GetComponent<Animator>())
+                {
+                activated.GetComponent<Animator>().SetBool("Activated", true);
+                } else
+                {
+                    activated.SetActive(false);
+                }
             }
         }
     }

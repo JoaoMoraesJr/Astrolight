@@ -650,6 +650,70 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 848705268, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 848705269, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 848705269, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 925170419, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 925170419, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 925170420, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 925170420, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 925170420, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 925170420, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 925170420, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 925170420, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1489863663, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1489863663, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1489863664, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 1489863664, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1489863664, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1769527944, guid: 90daa42da7688da4ebe9e22d61c946c6, type: 3}
       propertyPath: showTutorial
       value: 1
